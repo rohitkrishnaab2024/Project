@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fade Image on Hover</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: white;
+            padding: 15px;
+            border: 2px solid #4CAF50;
+            transition: opacity 0.3s;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h3 {
+            color: #4CAF50;
+        }
+
+        p {
+            color: #333;
+        }
+
+        .container:hover {
+            border: 2px solid #45a049;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".container img").mouseenter(function () {
+                $(this).fadeTo(300, 0.5);
+            });
+
+            $(".container img").mouseleave(function () {
+                $(this).fadeTo(300, 1);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Sample Image">
+        <h3>Sample Image</h3>
+        <p>This image fades when you hover over it.</p>
+    </div>
+
+</body>
+</html>

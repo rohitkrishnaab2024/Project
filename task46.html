@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Hide Paragraph</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#toggleBtn").click(function () {
+                $("#myPara").toggle();
+            });
+        });
+    </script>
+
+    <style>
+        #myPara {
+            display: block;
+            padding: 10px;
+            background-color: lightgreen;
+            width: 200px;
+        }
+
+        #toggleBtn {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="toggleBtn">Show/Hide Paragraph</button>
+
+    <p id="myPara">
+        This is a sample paragraph!
+    </p>
+
+</body>
+</html>

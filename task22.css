@@ -1,0 +1,51 @@
+body{
+    background-color: lightgrey;
+    font-family: Arial;
+}
+
+.product-card{
+    background-color: white;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.product-image{
+    width: 100%;
+    height: auto;
+}
+
+.product-name{
+    color: black;
+}
+
+.price{
+    color: green;
+    font-weight: bold;
+}
+
+.rating{
+    color: orange;
+    margin: 5px 0;
+}
+
+.description{
+    color: gray;
+    font-size: 14px;
+}
+
+.cart-btn{
+    background-color: blue;
+    color: whitesmoke;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-btn:hover{
+    background-color: mediumvioletred;
+}

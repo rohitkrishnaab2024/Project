@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Simple jQuery Gallery</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+body {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+h2 {
+    color: red;
+}
+#mainImage {
+    width: 400px;
+    height: 250px;
+    margin-bottom: 15px;
+    border: 3px solid red;
+}
+.thumbnails img {
+    width: 120px;
+    height: 80px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid darkred;
+}
+.thumbnails img:hover {
+    border: 2px solid red;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $(".thumb").click(function(){
+        var newImage = $(this).attr("src");
+        $("#mainImage").fadeOut(300, function(){
+            $(this).attr("src", newImage);
+            $(this).fadeIn(300);
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<h2>Virat Kohli RCB Gallery</h2>
+<img id="mainImage"
+src="https://onecricketnews.akamaized.net/parth-editor/oc-dashboard/news-images-prod/1730454635243_virat.jpeg?type=md">
+
+<div class="thumbnails">
+    <img class="thumb" src="https://onecricketnews.akamaized.net/parth-editor/oc-dashboard/news-images-prod/1730454635243_virat.jpeg?type=md">
+    <img class="thumb" src="images/kohli2.jpg">
+    <img class="thumb" src="images/kohli3.jpg">
+</div>
+
+</body>
+</html>

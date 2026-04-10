@@ -1,0 +1,117 @@
+:root {
+    --portal-surface: #ffffff;
+    --portal-accent: #1f4f46;
+    --portal-accent-soft: #d8e5df;
+    --portal-text: #1f2933;
+    --portal-border: #d7ddd8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #f8f5ef 0%, #eef3f0 100%);
+    color: var(--portal-text);
+}
+
+.portal-login {
+    background:
+        radial-gradient(circle at top left, rgba(31, 79, 70, 0.12), transparent 32%),
+        linear-gradient(180deg, #f8f5ef 0%, #eef3f0 100%);
+}
+
+.login-card,
+.task-card,
+.placeholder-card {
+    background: var(--portal-surface);
+    border-radius: 18px;
+}
+
+.login-card {
+    width: min(100%, 420px);
+}
+
+.portal-navbar {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(31, 79, 70, 0.08);
+}
+
+.portal-navbar .navbar-brand,
+.portal-navbar .nav-link,
+.portal-navbar .dropdown-item {
+    color: var(--portal-text);
+}
+
+.portal-navbar .dropdown-item.active,
+.portal-navbar .dropdown-item:active {
+    background: var(--portal-accent);
+    color: #fff;
+}
+
+.page-shell {
+    padding-top: 96px;
+    padding-bottom: 40px;
+}
+
+.page-header {
+    background: linear-gradient(135deg, rgba(31, 79, 70, 0.1), rgba(216, 229, 223, 0.9));
+    border: 1px solid rgba(31, 79, 70, 0.08);
+    border-radius: 20px;
+}
+
+.task-card,
+.placeholder-card {
+    border: 1px solid var(--portal-border);
+    overflow: hidden;
+}
+
+.task-card .card-header,
+.placeholder-card .card-header {
+    background: var(--portal-accent-soft);
+    border-bottom: 1px solid var(--portal-border);
+}
+
+.task-label {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.task-source {
+    font-size: 0.9rem;
+    color: #52606d;
+}
+
+.task-frame {
+    width: 100%;
+    border: 0;
+    background: #fff;
+}
+
+.placeholder-card .card-body {
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #52606d;
+}
+
+.page-nav-chip {
+    background: #fff;
+    border: 1px solid var(--portal-border);
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .page-shell {
+        padding-top: 86px;
+    }
+
+    .task-frame {
+        min-height: 420px;
+    }
+}

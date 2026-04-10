@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial;
+}
+
+.form-card{
+    width: 350px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.row{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input{
+    flex: 1;
+    padding: 8px;
+}
+
+.gender{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button{
+    width: 100%;
+    background: #000000;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}

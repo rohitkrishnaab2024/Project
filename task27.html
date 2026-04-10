@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+<link rel="stylesheet" href="task27.css">
+</head>
+
+<body>
+
+<div class="contact-container">
+<h2>Contact Us</h2>
+
+<form>
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+</div>
+
+<div class="row">
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" placeholder="email@example.com" required>
+</div>
+
+<div class="input-group">
+<label>Phone Number</label>
+<input type="tel" placeholder="+1 234 567 890">
+</div>
+</div>
+
+<div class="input-group">
+<label>Subject</label>
+<select required>
+<option value="">Select a topic...</option>
+<option value="support">Technical Support</option>
+<option value="billing">Billing Inquiry</option>
+<option value="other">General Question</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Message</label>
+<textarea rows="5" placeholder="How can we help you?"></textarea>
+</div>
+
+<div class="input-group">
+<label>Attach File</label>
+<input type="file" class="file-input">
+</div>
+
+<button type="submit" class="submit-btn">Send Message</button>
+
+</form>
+</div>
+
+</body>
+</html>

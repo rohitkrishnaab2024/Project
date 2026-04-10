@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Cards Tooltip</title>
+<style>
+body{
+    font-family: Arial;
+    background:#0f172a;
+    padding:40px;
+    color:white;
+}
+.container{
+    position:relative;
+    height:250px;
+}
+.card{
+    position:relative;
+    width:180px;
+    padding:15px;
+    background:#1e293b;
+    border-radius:10px;
+    box-shadow:6px 6px 12px rgba(0,0,0,0.4);
+    display:inline-block;
+    margin-left:-60px;
+    z-index:10;
+    cursor:pointer;
+    border:1px solid #334155;
+    transition:0.3s;
+}
+.card:hover{
+    background:#334155;
+    transform:translateY(-5px);
+}
+.card:first-child{
+    margin-left:0;
+}
+.tooltip{
+    position:absolute;
+    top:35px;
+    left:10px;
+    background:#22c55e;
+    color:black;
+    padding:5px 8px;
+    font-size:12px;
+    border-radius:6px;
+    display:none;
+    z-index:20;
+    white-space:nowrap;
+}
+</style>
+</head>
+<body>
+
+<h3>Products</h3>
+<div class="container">
+    <div class="card">Product 1
+        <div class="tooltip">Details about Product 1</div>
+    </div>
+    <div class="card">Product 2
+        <div class="tooltip">Details about Product 2</div>
+    </div>
+    <div class="card">Product 3
+        <div class="tooltip">Details about Product 3</div>
+    </div>
+</div>
+
+<script>
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+    let tooltip = card.querySelector(".tooltip");
+
+    card.addEventListener("mouseenter", function(){
+        tooltip.style.display = "block";
+        tooltip.style.zIndex = "999";
+    });
+
+    card.addEventListener("mouseleave", function(){
+        tooltip.style.display = "none";
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image with Caption Overlay</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/island.jpg" alt="Island Image">
+        <div class="caption">Beautiful Island View</div>
+    </div>
+</body>
+</html>
